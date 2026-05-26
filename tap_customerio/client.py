@@ -36,7 +36,7 @@ class CustomerIoStream(RESTStream):
 
     @property
     def schema_filepath(self):
-        return  f'{SCHEMAS_DIR}/{self.name}.json'
+        return SCHEMAS_DIR / f"{self.name}.json"
 
 
     @property
