@@ -11,22 +11,23 @@ keywords = [
 license = "Apache-2.0"
 
 [tool.poetry.dependencies]
-python = ">=3.7.1,<4"
-singer-sdk = { version="~=0.32.0" }
+python = ">=3.13,<4"
+singer-sdk = { version="~=0.48.0" }
 fs-s3fs = { version = "~=1.1.1", optional = true }
 requests = "~=2.31.0"
 schemabuilder = "^0.3.0"
 genson = "^1.2.2"
+setuptools = ">=68.0.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = ">=7.4.0"
-singer-sdk = { version="~=0.32.0", extras = ["testing"] }
+singer-sdk = { version="~=0.48.0", extras = ["testing"] }
 
 [tool.poetry.extras]
 s3 = ["fs-s3fs"]
 
 [tool.mypy]
-python_version = "3.9"
+python_version = "3.13"
 warn_unused_configs = true
 
 [tool.ruff]
@@ -36,7 +37,7 @@ ignore = [
 ]
 select = ["ALL"]
 src = ["tap_customerio"]
-target-version = "py37"
+target-version = "py313"
 
 
 [tool.ruff.flake8-annotations]
